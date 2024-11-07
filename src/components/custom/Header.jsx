@@ -16,11 +16,13 @@ import {
 import { FcGoogle } from "react-icons/fc"
 import { googleLogout, useGoogleLogin } from '@react-oauth/google'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 
 function Header() {
   const [openDialog, setOpenDailog] = useState()
   const user = JSON.parse(localStorage.getItem('user'))
+  const navigate = useNavigate()
 
   const onLogout = () => {
     console.log("logout")
@@ -53,16 +55,24 @@ function Header() {
     console.log(user)
   },[user])
 
+  const navigateToCreateTrip = () => {
+    navigate('/create-trip');
+  };
+
+  const navigateToMyTrips = () => {
+    navigate('/my-trips');
+  };
+
   return (
     <div className='p-2 shadow-sm flex justify-between items-center px-5'>
         <img src="/logo.svg" />
         <div>
           {user ? 
             <div className='flex gap-5 items-center'>
-              <a href="https://trip-planner-ekanduent-ashborn14s-projects.vercel.app/create-trip">
+              <a onClick={navigateToCreateTrip}>
                 <Button variant="outline" className="rounded-full">Create Trip</Button>
               </a>
-              <a href="https://trip-planner-ekanduent-ashborn14s-projects.vercel.app/my-trips">
+              <a onClick={navigateToMyTrips}>
                 <Button variant="outline" className="rounded-full">My Trips</Button>
               </a>
               
