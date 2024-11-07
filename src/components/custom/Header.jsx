@@ -59,10 +59,10 @@ function Header() {
         <div>
           {user ? 
             <div className='flex gap-5 items-center'>
-              <a href="/create-trip">
+              <a href="https://trip-planner-ekanduent-ashborn14s-projects.vercel.app/create-trip">
                 <Button variant="outline" className="rounded-full">Create Trip</Button>
               </a>
-              <a href="/my-trips">
+              <a href="https://trip-planner-ekanduent-ashborn14s-projects.vercel.app/my-trips">
                 <Button variant="outline" className="rounded-full">My Trips</Button>
               </a>
               
