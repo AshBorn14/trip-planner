@@ -27,8 +27,8 @@ const HotelCardItem = ({hotel}) => {
                     <h2 className='font-medium text-black'>{hotel?.name}</h2>
                     <h2 className='text-sm text-gray-500'>📌 {hotel?.address}</h2>
                     <div className=' flex justify-between items-center'>
-                        <h2 className='text-sm font-medium '>💸 {hotel?.price}</h2>
-                        <p className='text-sm font-medium'>⭐ {hotel.rating.split(" ")[0]}/5</p>
+                        <h2 className='text-xs font-medium '>💸 {hotel?.price}</h2>
+                        <p className='text-xs font-medium'>⭐ {hotel.rating.split(" ")[0]}/5</p>
 
                     </div>
 
