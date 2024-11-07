@@ -29,7 +29,7 @@ const PlaceCardItem = ({place}) => {
             <div className='pr-3 w-100'>
                 <h2 className='font-bold text-lg text-black'>{place?.name}</h2>
                 <p className='text-sm text-gray-600'>{place?.details}</p>
-                <h2 className='mt-3'>🕖 {place?.time_to_travel}</h2>
+                <h2 className='text-sm mt-3'>🕖 {place?.time_to_travel}</h2>
             </div>
         </div>
     </Link>
