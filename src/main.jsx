@@ -14,19 +14,19 @@ import MyTrips from './my-trips/index.jsx'
 const router  = createBrowserRouter([
   {
     path:"/",
-    element:<App/>
+    element:<><Header/><App/></>
   },
   {
     path:"/create-trip",
-    element:<CreateTrip/>
+    element:<><Header/><CreateTrip/></>
   },
   {
     path:"/view-trip/:tripId",
-    element:<Viewtrip/>
+    element:<><Header/><Viewtrip/></>
   },
   {
     path:'/my-trips',
-    element:<MyTrips/>
+    element:<><Header/><MyTrips/></>
   }
 
 ])
@@ -34,7 +34,7 @@ const router  = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_AUTH_CLIENT}>
-      <Header/>
+      
       <Toaster className="text-6xl" />
       <RouterProvider router={router} />
     </GoogleOAuthProvider>;
